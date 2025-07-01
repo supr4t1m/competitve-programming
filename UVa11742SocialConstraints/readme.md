@@ -32,7 +32,7 @@ int dfs(int depth, int n, int m) {
 
   int ans = 0;
 
-  // count the number of valid child nodes under it
+  // count the number of valid leaf nodes under it
   for (int i=0; i<n; i++) {
     if (!position[i]) { // if ith position isn't explored yet
       position[i] = depth + 1;
