@@ -1,3 +1,5 @@
+__Problem__: Generate all possible subsets of $$\\{ 0, 1, 2, . . . , N-1 \\}$$, for $$N = 20$$
+
 ```C++
 #include <algorithm>
 #include <cstdio>
