@@ -84,6 +84,7 @@ public class Main {
             for (int j=0; j<n; j++) {
                 for (int i=0; i<=j; i++) {
                     BigInteger temp = rsp(i, j);
+//                    System.out.println("RSP(" + i + ", " + j + ") = " + temp);
                     if (temp.compareTo(ans) > 0)
                         ans = temp;
                 }
@@ -108,8 +109,10 @@ public class Main {
         if (zero_idx[i-1] <= j)
             return BigInteger.ZERO;
         
+        // since we restarted the product when we 
+        // encountered 0.
         if (nums[i-1] == 0)
-            return BigInteger.ZERO;
+            return A[j];
         
         return A[j].divide(A[i-1]);
     }
